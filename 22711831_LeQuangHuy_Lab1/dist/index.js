@@ -45,6 +45,11 @@ const excercise6_1 = __importDefault(require("./excercise6"));
 const excercise7_1 = require("./excercise7");
 const exercise8_1 = __importStar(require("./exercise8"));
 const dog_imple_x9_1 = __importDefault(require("./dog_imple_x9"));
+const exercise10_1 = __importDefault(require("./exercise10"));
+const exercise11_1 = require("./exercise11");
+const exercise12_1 = require("./exercise12");
+const exercise13_1 = require("./exercise13");
+const exercise14_1 = require("./exercise14");
 console.log("//---------------------bài1--------------------------"); //--------------------bài1---------------------------
 let person1 = new exercise1_1.default("Lê Quang Huy", 17);
 person1.displayInfo();
@@ -87,3 +92,34 @@ console.log("//---------------------bài9--------------------------"); //-------
 let dog1 = new dog_imple_x9_1.default("Big Pull");
 console.log(dog1.getname());
 dog1.sound();
+console.log("//---------------------bài10--------------------------"); //---------------------bài10--------------------------
+const myAccount = new exercise10_1.default("Alice", "AC123456", 1000);
+console.log(myAccount.ownerName);
+console.log(myAccount.getBalance());
+myAccount.deposit(500);
+console.log(myAccount.getBalance());
+// myAccount.accountNumber="1934802"; saiiii
+console.log("//---------------------bài11--------------------------"); //---------------------bài11--------------------------
+const myDog = new exercise11_1.Dogg("BacRe");
+myDog.makeSound();
+myDog.bark();
+const myCat = new exercise11_1.Cat("Huy");
+myCat.makeSound();
+myCat.meow();
+console.log("//---------------------bài12--------------------------"); //---------------------bài12--------------------------
+const eagle = new exercise12_1.Bird("Na");
+eagle.fly();
+const salmon = new exercise12_1.Fish("Huy");
+salmon.swim();
+console.log("//---------------------bài13--------------------------"); //---------------------bài13--------------------------
+const square = new exercise13_1.Square(5);
+console.log("Square area:", square.area());
+const circle = new exercise13_1.Circle(3);
+console.log("Circle area:", circle.area());
+console.log("//---------------------bài14--------------------------"); //---------------------bài14--------------------------
+const developer = new exercise14_1.Developer("Huy", 102, "TypeScript");
+developer.displayInfo();
+developer.writeCode();
+const managerr = new exercise14_1.Manager("Na", 101, 5);
+managerr.displayInfo(); // Employee: Alice, ID: 101
+managerr.conductMeeting();

@@ -7,6 +7,12 @@ import Book from "./excercise6";
 import { User } from "./excercise7";
 import Product, { ManagerProduct } from "./exercise8";
 import Dog from "./dog_imple_x9"; 
+import Account from "./exercise10";
+import { Dogg,Cat } from "./exercise11";
+import { Fish,Bird } from "./exercise12";
+import { Circle,Square } from "./exercise13";
+import { Manager,Developer } from "./exercise14";
+import { Employee } from "./exercise14";
 console.log("//---------------------bài1--------------------------")//--------------------bài1---------------------------
 let person1 = new Person("Lê Quang Huy",17);
 person1.displayInfo()
@@ -49,8 +55,34 @@ console.log("//---------------------bài9--------------------------")//---------
 let dog1 = new Dog("Big Pull")
 console.log(dog1.getname());
 dog1.sound()
-
-
-
-
-
+console.log("//---------------------bài10--------------------------")//---------------------bài10--------------------------
+const myAccount = new Account("Alice", "AC123456", 1000);
+console.log(myAccount.ownerName);  
+console.log(myAccount.getBalance());   
+myAccount.deposit(500);
+console.log(myAccount.getBalance());    
+// myAccount.accountNumber="1934802"; saiiii
+console.log("//---------------------bài11--------------------------")//---------------------bài11--------------------------
+const myDog = new Dogg("BacRe");
+myDog.makeSound(); 
+myDog.bark();     
+const myCat = new Cat("Huy");
+myCat.makeSound(); 
+myCat.meow();      
+console.log("//---------------------bài12--------------------------")//---------------------bài12--------------------------
+const eagle = new Bird("Na");
+eagle.fly(); 
+const salmon = new Fish("Huy");
+salmon.swim(); 
+console.log("//---------------------bài13--------------------------")//---------------------bài13--------------------------
+const square = new Square(5);
+console.log("Square area:", square.area()); 
+const circle = new Circle(3);
+console.log("Circle area:", circle.area());
+console.log("//---------------------bài14--------------------------")//---------------------bài14--------------------------
+const developer = new Developer("Huy", 102, "TypeScript");
+developer.displayInfo();     
+developer.writeCode();      
+const managerr = new Manager("Na", 101, 5);
+managerr.displayInfo();       // Employee: Alice, ID: 101
+managerr.conductMeeting();

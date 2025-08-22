@@ -1,6 +1,6 @@
 export default class Person {
-     name: string;
-     age: number;
+    protected name: string;
+    protected age: number;
     constructor(name: string,age: number)
     {
          this.age=age;
@@ -9,6 +9,6 @@ export default class Person {
 
     displayInfo()
     {
-       console.log(`name: ${this.name}\nage: ${this.age}`)
+       console.log(`name: ${this.name}\nage: ${this.age}`);
     }
 }

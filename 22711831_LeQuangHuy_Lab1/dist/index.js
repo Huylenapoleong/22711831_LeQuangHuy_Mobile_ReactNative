@@ -44,6 +44,7 @@ const excercise5_1 = __importDefault(require("./excercise5"));
 const excercise6_1 = __importDefault(require("./excercise6"));
 const excercise7_1 = require("./excercise7");
 const exercise8_1 = __importStar(require("./exercise8"));
+const dog_imple_x9_1 = __importDefault(require("./dog_imple_x9"));
 console.log("//---------------------bài1--------------------------"); //--------------------bài1---------------------------
 let person1 = new exercise1_1.default("Lê Quang Huy", 17);
 person1.displayInfo();
@@ -82,3 +83,7 @@ console.log("Tất cả sản phẩm:");
 manager.displayAll();
 console.log("\nSản phẩm giá > 100:");
 manager.filterExpensive().forEach(p => p.display());
+console.log("//---------------------bài9--------------------------"); //---------------------bài9--------------------------
+let dog1 = new dog_imple_x9_1.default("Big Pull");
+console.log(dog1.getname());
+dog1.sound();

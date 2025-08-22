@@ -9,5 +9,10 @@ export default class Student extends Person {
      displayAllInfo(): void {
          console.log(`name : ${this.name}\nage : ${this.age}\ngrade : ${this.grade} `)
      }
+     public methodpublic () :void
+     {
+        console.log("hello");
+        
+     }
 
 }

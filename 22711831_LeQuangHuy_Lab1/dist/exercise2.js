@@ -12,5 +12,8 @@ class Student extends exercise1_1.default {
     displayAllInfo() {
         console.log(`name : ${this.name}\nage : ${this.age}\ngrade : ${this.grade} `);
     }
+    methodpublic() {
+        console.log("hello");
+    }
 }
 exports.default = Student;

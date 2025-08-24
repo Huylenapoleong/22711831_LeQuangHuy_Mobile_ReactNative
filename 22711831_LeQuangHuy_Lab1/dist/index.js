@@ -50,6 +50,16 @@ const exercise11_1 = require("./exercise11");
 const exercise12_1 = require("./exercise12");
 const exercise13_1 = require("./exercise13");
 const exercise14_1 = require("./exercise14");
+const exercise15_1 = require("./exercise15");
+const exercise16_1 = require("./exercise16");
+const exercise17_1 = require("./exercise17");
+const exercise18_1 = require("./exercise18");
+const exercise19_1 = require("./exercise19");
+const exercise20_1 = require("./exercise20");
+const exercise21_1 = require("./exercise21");
+const exercise22_1 = require("./exercise22");
+const exercise23_1 = require("./exercise23");
+const exercise24_1 = require("./exercise24");
 console.log("//---------------------bài1--------------------------"); //--------------------bài1---------------------------
 let person1 = new exercise1_1.default("Lê Quang Huy", 17);
 person1.displayInfo();
@@ -121,5 +131,87 @@ const developer = new exercise14_1.Developer("Huy", 102, "TypeScript");
 developer.displayInfo();
 developer.writeCode();
 const managerr = new exercise14_1.Manager("Na", 101, 5);
-managerr.displayInfo(); // Employee: Alice, ID: 101
+managerr.displayInfo();
 managerr.conductMeeting();
+console.log("//---------------------bài15--------------------------"); //---------------------bài15--------------------------
+const library = new exercise15_1.Library();
+const book1 = new excercise6_1.default("Dế Mèn Phiêu Lưu Ký", "Tô Hoài", 1941);
+const book2 = new excercise6_1.default("Tuổi Trẻ Đáng Giá Bao Nhiêu", "Rosie Nguyễn", 2016);
+library.addBook(book1);
+library.addBook(book2);
+const user11 = new exercise15_1.User15("Nguyễn Văn A");
+const user22 = new exercise15_1.User15("Trần Thị B");
+library.addUser(user11);
+library.addUser(user22);
+console.log(" Danh sách sách trong thư viện:");
+library.getBooks().forEach((book) => {
+    console.log(`- ${book.title} (${book.year}) của ${book.author}`);
+});
+console.log("\n Danh sách người dùng:");
+library.getUsers().forEach((user) => {
+    console.log(`- ${user.name}`);
+});
+console.log("//---------------------bài16--------------------------"); //---------------------bài16--------------------------
+const numberBox = new exercise16_1.Box1(123);
+console.log(numberBox.getValue());
+const stringBox = new exercise16_1.Box1("Hello");
+console.log(stringBox.getValue());
+const objectBox = new exercise16_1.Box1({ name: "Lan", age: 22 });
+console.log(objectBox.getValue());
+console.log("//---------------------bài17--------------------------"); //---------------------bài17--------------------------
+const logger1 = exercise17_1.Logger.getInstance();
+const logger2 = exercise17_1.Logger.getInstance();
+logger1.log("Ứng dụng đã khởi động");
+logger2.error("Lỗi kết nối cơ sở dữ liệu");
+console.log("Hai logger có cùng instance:", logger1 === logger2);
+console.log("//---------------------bài18--------------------------"); //---------------------bài18--------------------------
+console.log(exercise18_1.MathUtil.add(10, 5));
+console.log(exercise18_1.MathUtil.subtract(10, 5));
+console.log(exercise18_1.MathUtil.multiply(10, 5));
+console.log(exercise18_1.MathUtil.divide(10, 5));
+console.log("//---------------------bài19--------------------------"); //---------------------bài19--------------------------
+const animals = [new exercise19_1.Dog19(), new exercise19_1.Cat19(), new exercise19_1.Animal19()];
+for (const animal of animals) {
+    animal.makeSound();
+}
+console.log("//---------------------bài20--------------------------"); //---------------------bài20--------------------------
+const myCar = new exercise20_1.Car19("Toyota", "Camry");
+const myBike = new exercise20_1.Bike19("Yamaha", "Sport");
+myCar.startEngine();
+console.log(myCar.getInfo());
+myCar.stopEngine();
+myBike.startEngine();
+console.log(myBike.getInfo());
+myBike.stopEngine();
+console.log("//---------------------bài21--------------------------"); //---------------------bài21--------------------------
+const stringRepo = new exercise21_1.Repository();
+stringRepo.add("Xin chào");
+stringRepo.add("TypeScript");
+console.log(stringRepo.getAll());
+const numberRepo = new exercise21_1.Repository();
+numberRepo.add(10);
+numberRepo.add(20);
+console.log(numberRepo.getAll());
+console.log("//---------------------bài22--------------------------"); //---------------------bài22--------------------------
+const stack = new exercise22_1.Stack();
+stack.push(10);
+stack.push(20);
+stack.push(30);
+console.log(stack);
+console.log(stack.peek());
+console.log(stack.pop());
+console.log(stack.peek());
+console.log(stack.isEmpty());
+stack.pop();
+stack.pop();
+console.log(stack.isEmpty());
+console.log("//---------------------bài23--------------------------"); //---------------------bài23--------------------------
+const cash = new exercise23_1.CashPayment23();
+const card = new exercise23_1.CardPayment23("1234-5678-9012-3456");
+cash.pay(500000);
+card.pay(1200000);
+console.log("//---------------------bài24--------------------------"); //---------------------bài24--------------------------
+const myFan = new exercise24_1.Fan();
+const myAC = new exercise24_1.AirConditioner();
+myFan.turnOn();
+myAC.turnOn();

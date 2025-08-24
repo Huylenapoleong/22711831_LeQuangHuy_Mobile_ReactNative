@@ -60,6 +60,9 @@ const exercise21_1 = require("./exercise21");
 const exercise22_1 = require("./exercise22");
 const exercise23_1 = require("./exercise23");
 const exercise24_1 = require("./exercise24");
+const exercise25_1 = require("./exercise25");
+const exercise26_1 = require("./exercise26");
+const exercise27_1 = require("./exercise27");
 console.log("//---------------------bài1--------------------------"); //--------------------bài1---------------------------
 let person1 = new exercise1_1.default("Lê Quang Huy", 17);
 person1.displayInfo();
@@ -215,3 +218,16 @@ const myFan = new exercise24_1.Fan();
 const myAC = new exercise24_1.AirConditioner();
 myFan.turnOn();
 myAC.turnOn();
+console.log("//---------------------bài25--------------------------"); //---------------------bài25--------------------------
+exercise25_1.Shape.describe();
+console.log("//---------------------bài26--------------------------"); //---------------------bài26--------------------------
+const order = new exercise26_1.Order26();
+order.addProduct(new exercise8_1.default("Laptop", 15000000));
+order.addProduct(new exercise8_1.default("Mouse", 500000));
+order.addProduct(new exercise8_1.default("Keyboard", 1000000));
+order.listProducts();
+console.log("Total Price:", order.calculateTotal(), "VND");
+console.log("//---------------------bài27--------------------------"); //---------------------bài27--------------------------
+const teacher = new exercise27_1.Teacher("Ms. Linh", 35, "Mathematics");
+teacher.displayInfo();
+teacher.introduce();

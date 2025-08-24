@@ -23,6 +23,9 @@ import { Repository } from "./exercise21";
 import { Stack } from "./exercise22";
 import { CardPayment23, CashPayment23 } from "./exercise23";
 import { AirConditioner, Fan } from "./exercise24";
+import { Shape } from "./exercise25";
+import { Order26 } from "./exercise26";
+import { Teacher } from "./exercise27";
 console.log("//---------------------bài1--------------------------")//--------------------bài1---------------------------
 let person1 = new Person("Lê Quang Huy",17);
 person1.displayInfo()
@@ -176,7 +179,18 @@ card.pay(1200000);
 console.log("//---------------------bài24--------------------------")//---------------------bài24--------------------------
 const myFan = new Fan();
 const myAC = new AirConditioner();
-
 myFan.turnOn();  
 myAC.turnOn();   
-
+console.log("//---------------------bài25--------------------------")//---------------------bài25--------------------------
+Shape.describe(); 
+console.log("//---------------------bài26--------------------------")//---------------------bài26--------------------------
+const order = new Order26();
+order.addProduct(new Product("Laptop", 15000000));
+order.addProduct(new Product("Mouse", 500000));
+order.addProduct(new Product("Keyboard", 1000000));
+order.listProducts();
+console.log("Total Price:", order.calculateTotal(), "VND");
+console.log("//---------------------bài27--------------------------")//---------------------bài27--------------------------
+const teacher = new Teacher("Ms. Linh", 35, "Mathematics");
+teacher.displayInfo();  
+teacher.introduce();     

@@ -15,3 +15,6 @@ export class Teacher extends Person {
     console.log(`Hello, I'm ${this.name}, I teach ${this.subject}.`);
   }
 }
+let tc = new Teacher("Lequanghuy",12,"tonas");
+    console.log(tc.introduce);
+    
